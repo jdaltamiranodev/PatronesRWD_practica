@@ -39,3 +39,14 @@ h1 {
 }
 
 /** CODIGO AQUI **/
+
+@media (min-width: 768px) {
+    .dos-columnas {
+        display: grid;
+        /* grid-template-columns: 50% 50%; */ /* Se pueden definir columnas de esta forma. */
+        /* grid-template-columns: repeat(2, 50%); */ /* Es igual que el de arriba. */
+        /* grid-template-columns: 1fr 1fr; */ /* Tambien se puede hacer de esta forma. */
+        grid-template-columns: repeat(2, 1fr); /* Lo mas común es hacerlo de esta forma. */
+        gap: 2rem;
+    }
+}
