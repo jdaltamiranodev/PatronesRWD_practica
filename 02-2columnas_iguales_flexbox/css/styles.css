@@ -39,3 +39,18 @@ h1 {
 }
 
 /** CODIGO AQUI **/
+@media (min-width: 768px) {
+    .dos-columnas {
+        display: flex; /* Activa todos los elementos de flex box */
+        justify-content: space-between; /* Posiciona un elemento a la izquierda, otro a la derecha y el centro libre. */
+        gap: 2rem; /* Ahora existe gap que con menos código hace exactamente lo mismo pero no tiene un soporte del 100% en navegadores. La opción de abajo, flex, si tiene soporte del 100% en navegadores por tener mas tiempo implementada. */
+    }
+
+    .entrada-blog {
+        /* flex-basis: calc(50% - 1rem); */ /* Que ocupe el 50% del ancho de la página y como se requiere separación se le resta 1rem. Esto requiere en el contenedor donde esta definido el display: flex definir tambien un justiy-content: space-between para que quede un elemento a la izquierda, otro a la derecha y el centro libre. */
+        flex: 0 0 calc(50% - 1rem); /* Forma antigua. Se puede indicar de la siguiente forma, sin embargo, flex: toma tres valores:display: 
+                                       1- Factor de crecimiento 0. 
+                                       2- Valor, factor 0
+                                       3- Tamańo base. */
+    }
+}
