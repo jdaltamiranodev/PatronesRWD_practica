@@ -49,3 +49,20 @@ p {
 
 
 /** CODIGO AQUI **/
+@media (min-width: 768px) {
+    .con-sidebar {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    aside {
+        flex: 1; /* Esto es igual a la linea de abajo */
+        /* flex: 0 0 calc(33.3% - 1rem); */ /* Esto se ve mas complicado. El resultado es igual a la linea de arriba*/
+    }
+
+    article {
+        flex: 3; /* Esto es igual a la linea de abajo */
+        /* flex: 0 0 calc(66.6% - 1rem); */ /* Esto se ve mas complicado. El resultado es igual a la linea de arriba*/
+    }
+}
